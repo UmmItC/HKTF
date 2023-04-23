@@ -239,3 +239,7 @@ voice_miles.so
 voice_silk.so
 voice_speex.so
 zp_extraitems.ini
+
+# compiled
+cstrike/addons/amxmodx/scripting/compiled/
+cstrike/addons/amxmodx/scripting/temp.txt
