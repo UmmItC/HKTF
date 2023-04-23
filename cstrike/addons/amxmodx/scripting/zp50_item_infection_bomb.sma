@@ -20,6 +20,7 @@
 #include <cs_weap_models_api>
 #include <zp50_items>
 #include <zp50_gamemodes>
+#include <screenfade_util>
 
 // Settings file
 new const ZP_SETTINGS_FILE[] = "zombieplague.ini"
@@ -59,6 +60,7 @@ new g_GameModeInfectionID
 new g_GameModeMultiID
 new g_InfectionBombCounter, cvar_infection_bomb_round_limit
 new g_armor_count
+new g_infection_bomb_color[3]
 
 public plugin_init()
 {
@@ -74,6 +76,22 @@ public plugin_init()
 
 	new pcvar = create_cvar("zp_infection_bomb_armor_count", "200")
 	bind_pcvar_num(pcvar, g_armor_count)
+
+	pcvar = create_cvar("zp_infection_bomb_got_color", "000255000")
+	hook_cvar_change(pcvar, "CvarBombColor")
+	CvarBombColor(pcvar)
+}
+
+public CvarBombColor(pcvar)
+{
+	new string[16];
+	get_pcvar_string(pcvar, string, charsmax(string))
+
+    new temp = str_to_num(string);
+    g_infection_bomb_color[0] = temp / 1000000;
+    temp %= 1000000;
+    g_infection_bomb_color[1] = temp / 1000;
+    g_infection_bomb_color[2] = temp % 1000;
 }
 
 public plugin_precache()
@@ -311,8 +329,6 @@ infection_explode(ent)
 	
 	while ((victim = engfunc(EngFunc_FindEntityInSphere, victim, origin, NADE_EXPLOSION_RADIUS)) != 0)
 	{
-		// Turn into zombie
-
 		// Only effect alive humans
 		if (!is_user_alive(victim) || zp_core_is_zombie(victim))
 		{
@@ -324,7 +340,8 @@ infection_explode(ent)
 		if (armor >= g_armor_count)
 		{
 			set_user_armor(victim, armor - g_armor_count)	
-			emit_sound(victim, CHAN_BODY, g_sound_armor_hit, 1.0, ATTN_NORM, 0, PITCH_NORM)			
+			emit_sound(victim, CHAN_BODY, g_sound_armor_hit, 1.0, ATTN_NORM, 0, PITCH_NORM)
+			UTIL_ScreenFade(victim, g_infection_bomb_color, 0.6, 0.1, 170);	
 			continue;
 		}
 		
