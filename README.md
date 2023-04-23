@@ -1,6 +1,23 @@
-# HKTF Resident evil Mode
+# HKTF Tig
 
-**重要：項目還在計劃中**
+為左重回以往細個個陣打 1.6 Tig Server 既日子。
+
+***重要：項目還在計劃中***
+
+# Usage
+
+AMXX 用緊 1.9.0 版本，zp 用緊 zp5.0 patched。
+
+1. 你需要本身已經裝好左 **HLDS**, **AMXX**, **METAMOD**, **zombie plague 5.0 patched**
+2. 當你裝好哂幾樣野之後，直接 Clone 呢個 Repo 再將 **cstrike** replace 落去你既 **cstrike**
+3. Compile 所有 sma 檔案，然後放去 **cstrike/addons/amxmodx/plugins/**
+3. 然後再入你既 Server
+
+```shell
+./hlds_run -game cstrike +map de_dust2 +maxplayers 32 -insecure
+```
+
+# 模式簡介
 
 目前暫定模式有兩個，古名意思係跟返原版 RE 既設定，同 TIG 唔一樣，因為本身 TIG 既模式係有 NG MODE，但如果有玩 RE2 既大家都會知道，N王係出自於 RE3，而 G 王係出自於 RE2，所以呢一部分係唔會同 TIG 一樣。
 
