@@ -6,6 +6,7 @@
 - [x] 冰彈 (Dynamic Light 效果)
 - [x] HP 100, HP 300 (藍色 Screen fadeout) 
 - [x] AP 100 (綠色 Screen fadeout)
+- [x] 彈屍扣甲
 
 ## 未有功能
 
