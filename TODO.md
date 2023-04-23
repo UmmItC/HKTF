@@ -1,19 +1,4 @@
-# HKTF Tig
-
-為左重回以往細個個陣打 1.6 Tig Server 既日子。
-
-# Usage
-
-AMXX 用緊 1.9.0 版本，zp 用緊 zp5.0 patched。
-
-1. 你需要本身已經裝好左 **HLDS**, **AMXX**, **METAMOD**, **zombie plague 5.0 patched**
-2. 當你裝好哂幾樣野之後，直接 Clone 呢個 Repo 再將 **cstrike** replace 落去你既 **cstrike**
-3. Compile 所有 sma 檔案，然後放去 **cstrike/addons/amxmodx/plugins/**
-3. 然後再入你既 Server
-
-```shell
-./hlds_run -game cstrike +map de_dust2 +maxplayers 32 -insecure
-```
+# TODO
 
 ## 現有功能
 
