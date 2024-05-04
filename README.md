@@ -1,57 +1,56 @@
 # HKTF Tig
 
-為左重回以往細個個陣打 1.6 Tig Server 既日子。
+In order to relive the days of playing on 1.6 Tig Server from childhood.
 
-***重要：項目還在計劃中***
+***Important: Project still under planning***
 
 # Usage
 
-AMXX 用緊 1.9.0 版本，zp 用緊 zp5.0 patched。
+Using AMXX version 1.9.0, and zp using zp5.0 patched.
 
-1. 你需要本身已經裝好左 **HLDS**, **AMXX**, **METAMOD**, **zombie plague 5.0 patched**
-2. 當你裝好哂幾樣野之後，直接 Clone 呢個 Repo 再將 **cstrike** replace 落去你既 **cstrike**
-3. Compile 所有 sma 檔案，然後放去 **cstrike/addons/amxmodx/plugins/**
-3. 然後再入你既 Server
+1. You need to have **HLDS**, **AMXX**, **METAMOD**, **zombie plague 5.0 patched** installed.
+2. After installing all the necessary components, simply clone this Repo and replace the **cstrike** folder into your **cstrike** directory.
+3. Compile all `.sma` files and place them in **cstrike/addons/amxmodx/plugins/**.
+4. Then start your server.
 
 ```shell
 ./hlds_run -game cstrike +map de_dust2 +maxplayers 32 -insecure
 ```
 
-# 模式簡介
+# Mode Introduction
 
-目前暫定模式有兩個，古名意思係跟返原版 RE 既設定，同 TIG 唔一樣，因為本身 TIG 既模式係有 NG MODE，但如果有玩 RE2 既大家都會知道，N王係出自於 RE3，而 G 王係出自於 RE2，所以呢一部分係唔會同 TIG 一樣。
+Currently, there are two modes, named after the original Resident Evil settings, different from Tig as Tig mode has NG MODE. But if you've played RE2, you know that N King comes from RE3 and G King comes from RE2, so this part is different from Tig.
 
-- Resident evil 2
-- Resident evil 3
+- Resident Evil 2
+- Resident Evil 3
 
-## Resident evil 2
+## Resident Evil 2
 
-每場抽3個人做 Leader，Leader 分別係：
+Three people are selected as leaders for each round, the leaders are:
 
 - RPD Leon Kennedy
-- Claire redfield
-- Ada wong
+- Claire Redfield
+- Ada Wong
 
-### Resient evil 2 模式設定
+### Resident Evil 2 Mode Settings
 
-RPD Leon Kennedy 如果同 ADA 既距離喺 1M 內，ATK 會由本身既 % 再加上 30%，以示返原版既其中一個情節，ADA 需要 leon 個陣，leon 即刻狗衝過黎既一部分。
+If RPD Leon Kennedy is within 1 meter of Ada, his ATK will increase by 30% of his own %. This is to reflect one of the scenarios from the original game, where Ada needs Leon to rush to her aid.
 
-### Leader 設定
+### Leader Settings
 
-三位 Leader 會派送唔同既手槍同主槍，其數值都係各不同，模組都係會唔一樣
+Each of the three leaders will receive different handguns and rifles, with different stats and models.
 
 RPD Leon Kennedy:
 
-- USP 手槍 (Matilda)
-- 散彈
-- 3粒彈 (冰彈，火彈，光彈）
+- USP Pistol (Matilda)
+- Shotgun
+- 3 types of ammo (Ice, Fire, Flash)
 
-Claire redfield:
+Claire Redfield:
 
-- USP 手槍 (SLS 60)
-- 散彈
-- 3粒彈 (冰彈，火彈，光彈）
-
+- USP Pistol (SLS 60)
+- Shotgun
+- 3 types of ammo (Ice, Fire, Flash)
 
 # Reference
 
